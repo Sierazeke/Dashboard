@@ -37,8 +37,6 @@ export default function Homepage({ user, transactions }) {
 {/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
         <div>
 
-
-
     {/* --- Balance --- */}
 
             <h1 className="font-bold ml-5 w-40 my-6 bg-gray-400 text-center ">Your current balance is {user.balance}€</h1> 
