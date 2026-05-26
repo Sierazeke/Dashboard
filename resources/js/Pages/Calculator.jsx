@@ -1,6 +1,7 @@
-export default function Homepage({ user }) {
+export default function Calculator({ user }) {
     return (
-        <div className="bg-gray-300 min-h-screen">
+
+    <div className="bg-gray-300 min-h-screen">
 
 {/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
 
@@ -29,5 +30,9 @@ export default function Homepage({ user }) {
 
 {/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
 
-    </div>)
+        
+
+
+
+    </div>) 
 }

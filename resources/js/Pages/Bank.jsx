@@ -14,15 +14,24 @@ export default function Homepage({ user, transactions }) {
     <nav className="bg-gray-800 p-2 font-bold text-2xl font-mono text-white flex items-center gap-4">
 
         <h1 className="bg-gray-600 p-2 rounded-lg">Hello, {user ? user.name : 'Guest'}!</h1>
+
+        {/* --- Homepage --- */}
         <a href="/">
             <button className="ml-5 p-2 bg-gray-700 hover:bg-gray-500 transition duration-300 rounded-lg hover:underline">Homepage</button>
         </a>
+        {/* --- Bank --- */}
         <a href="bank">
             <button className="ml-5 p-2 bg-gray-700 hover:bg-gray-500 transition duration-300 rounded-lg hover:underline">Bank</button>
         </a>
+        {/* --- Calculator --- */}
+        <a href="calculator">
+            <button className="ml-5 p-2 bg-gray-700 hover:bg-gray-500 transition duration-300 rounded-lg hover:underline">Calculator</button>
+        </a>
+        {/* Profile */}
         <a href="profile">
             <button className="ml-5 p-2 bg-gray-700 hover:bg-gray-500 transition duration-300 rounded-lg hover:underline">Profile</button>
         </a>
+
     </nav>
 
 {/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
@@ -78,8 +87,9 @@ export default function Homepage({ user, transactions }) {
                         Clear History
                 </button>
             </nav>
+
             {transactions.map((transaction) => (
-                <p className="bg-slate-400 w-1/6 text-center my-1 p-1"
+                <p className="bg-slate-400 w-1/4 text-center my-1 p-1"
                  key={transaction.id}>
                     {transaction.type} - {transaction.amount}€
                 </p>

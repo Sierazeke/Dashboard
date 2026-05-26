@@ -11,6 +11,12 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/calculator',  function () {
+    return Inertia::render('Calculator', [
+        'user' => auth()->user()
+    ]);
+});
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/bank', function () {
         return Inertia::render('Bank', [
@@ -19,15 +25,19 @@ Route::middleware(['auth', 'verified'])->group(function () {
         ]);
     });
 
-    Route::get('/profile', function () {
-        return Inertia::render('Profiles', [
-            'user' => auth()->user()
-        ]);
-    });
-
     Route::post('/deposit', [BankController::class, 'deposit']);
     Route::post('/withdraw', [BankController::class, 'withdraw']);
     Route::delete('/clear-history', [BankController::class, 'clearHistory']);
+
+
+
+
+Route::get('/profile', function () {
+    return Inertia::render('Profiles', [
+        'user' => auth()->user()
+    ]);
+});
+
 });
 
 require __DIR__.'/auth.php';

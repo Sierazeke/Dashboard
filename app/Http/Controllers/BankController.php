@@ -48,4 +48,5 @@ class BankController extends Controller
             $user = auth()->user();
             Transaction::where('user_id', $user->id)->delete();
         }
+        
 }
