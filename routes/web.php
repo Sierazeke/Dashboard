@@ -29,7 +29,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/withdraw', [BankController::class, 'withdraw']);
     Route::delete('/clear-history', [BankController::class, 'clearHistory']);
 
-
+Route::get('/notes', function () {
+    return Inertia::render('Notes', [
+        'user' => auth()->user()
+    ]);
+});
 
 
 Route::get('/profile', function () {

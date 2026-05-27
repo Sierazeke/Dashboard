@@ -19,7 +19,7 @@ export default function Calculator({ user }) {
         return (
             <button 
                 onClick={onClick}
-                className="bg-zinc-500 text-white w-20 h-14 mr-1 mt-1 rounded-lg hover:bg-zinc-600">
+                className="bg-zinc-500 font-bold ml-2 text-white w-20 h-14 mr-1 mt-1 rounded-lg hover:bg-zinc-600">
                 {label}
             </button>
         );
@@ -46,7 +46,11 @@ export default function Calculator({ user }) {
         <a href="calculator">
             <button className="ml-5 p-2 bg-gray-700 hover:bg-gray-500 transition duration-300 rounded-lg hover:underline">Calculator</button>
         </a>
-        {/* Profile */}
+        {/* --- Notes --- */}
+        <a href="notes">
+            <button className="ml-5 p-2 bg-gray-700 hover:bg-gray-500 transition duration-300 rounded-lg hover:underline">Notes</button>
+        </a>
+        {/* --- Profile --- */}
         <a href="profile">
             <button className="ml-5 p-2 bg-gray-700 hover:bg-gray-500 transition duration-300 rounded-lg hover:underline">Profile</button>
         </a>
@@ -57,9 +61,9 @@ export default function Calculator({ user }) {
 
     <div className="m-4">
 
-        <div className="p-2 bg-gray-400 w-1/3">{expression || '0'}</div>
+        <div className="p-2 bg-gray-400 w-1/4">{expression || '0'}</div>
 
-        <div className="p-2 bg-gray-400 w-1/3">= {result}</div>
+        <div className="p-2 bg-gray-400 w-1/4">= {result}</div>
 
         <div>
             <CalcButton label="7" onClick={() => setExpression(expression + '7')}/>

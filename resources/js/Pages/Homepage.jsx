@@ -20,7 +20,11 @@ export default function Homepage({ user }) {
         <a href="calculator">
             <button className="ml-5 p-2 bg-gray-700 hover:bg-gray-500 transition duration-300 rounded-lg hover:underline">Calculator</button>
         </a>
-        {/* Profile */}
+        {/* --- Notes --- */}
+        <a href="notes">
+            <button className="ml-5 p-2 bg-gray-700 hover:bg-gray-500 transition duration-300 rounded-lg hover:underline">Notes</button>
+        </a>
+        {/* --- Profile --- */}
         <a href="profile">
             <button className="ml-5 p-2 bg-gray-700 hover:bg-gray-500 transition duration-300 rounded-lg hover:underline">Profile</button>
         </a>

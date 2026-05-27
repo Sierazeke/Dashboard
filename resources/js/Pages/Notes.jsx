@@ -1,9 +1,7 @@
-export default function Profiles({ user }) {
+export default function Notes({ user }) {
     return (
 
     <div className="bg-gray-300 min-h-screen">
-
-{/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
 
 {/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
 
@@ -35,16 +33,8 @@ export default function Profiles({ user }) {
     </nav>
 
 {/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
-            
-{/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
 
-    <h1 className="p-2 px-5 bg-gray-500 text-2xl font-bold">Username: {user.name}</h1>
-    <p className="p-2 px-5 bg-gray-500 text-black">E-Mail: {user.email}</p>
-    <p className="p-2 px-5 bg-gray-500 text-black">Current Balance: {user.balance}€</p>
-    <p className="p-2 px-5 bg-gray-500 text-black">User ID: {user.id}</p>
+        
 
-{/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
-
-    <img src="https://imgs.search.brave.com/BF27SbH9q01MS3SzPoI_UUgdxlpeVbC02T82crM3Dts/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/cmQuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDE4LzEyLzUw/LUZ1bm55LUFuaW1h/bC1QaWN0dXJlcy1U/aGF0LVlvdS1OZWVk/LUluLVlvdXItTGlm/ZS04LmpwZz9maXQ9/NzAwLDQ2Nw" alt="" />
-    </div>);
+    </div>) 
 }
