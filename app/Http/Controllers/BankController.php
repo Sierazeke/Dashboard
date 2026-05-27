@@ -7,7 +7,7 @@ use App\Models\Transaction;
 
 class BankController extends Controller
 {
-    // ----- Deposit
+    // --- Deposit Money ---
 
     public function deposit(Request $request) {
         $request->validate([
@@ -23,7 +23,7 @@ class BankController extends Controller
         ]);
     }
 
-    // ----- Withdraw
+    // --- Withdraw Money ---
 
     public function withdraw(Request $request) {
         $request->validate([
@@ -42,7 +42,7 @@ class BankController extends Controller
         ]);
     }
 
-    // ----- Clear History
+    // --- Clear History ---
 
         public function clearHistory(Request $request) {
             $user = auth()->user();

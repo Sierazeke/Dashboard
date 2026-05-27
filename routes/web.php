@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\BankController;
+use App\Http\Controllers\NoteController;
 use App\Models\Transaction;
 
 Route::get('/', function () {
@@ -35,6 +36,10 @@ Route::get('/notes', function () {
     ]);
 });
 
+    Route::get('/notes', [NoteController::class, 'show']);
+    Route::post('/notes', [NoteController::class, 'add']);
+    Route::put('/notes/{id}', [NoteController::class, 'update']);
+    Route::delete('/notes/{id}', [NoteController::class, 'delete']);
 
 Route::get('/profile', function () {
     return Inertia::render('Profiles', [
