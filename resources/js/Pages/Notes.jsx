@@ -42,8 +42,8 @@ export default function Notes({ user, notes }) {
 
         {/* --- Header --- */}
 
-        <div className="flex flex-col text-center text-5xl font-bold m-6 p-2 bg-gray-400">
-            <h1>Notes</h1>
+        <div className="flex flex-col text-center text-5xl font-bold m-6 p-2">
+            <h1>Notes 🕮</h1>
         </div>
 
         {/* --- Body --- */}
@@ -54,6 +54,7 @@ export default function Notes({ user, notes }) {
             type="text" 
             value={title} 
             placeholder="Enter a title"
+            className="bg-gray-200 text-center rounded"
             onChange={(e) => setTitle(e.target.value)}/>
         </div>
 
@@ -63,22 +64,24 @@ export default function Notes({ user, notes }) {
             type="text" 
             value={comment} 
             placeholder="Enter a comment"
+            className="bg-gray-200 text-center rounded"
             onChange={(e) => setComment(e.target.value)}/>
         </div>
 
         {/* --- Button --- */}
         <div className="flex flex-col items-center">
             <button 
-                onClick={() => router.post('/notes', {title: title, comment: comment})}>
+                onClick={() => router.post('/notes', {title: title, comment: comment})}
+                className="bg-emerald-400 py-2 px-4 m-1 rounded-lg transition duration-300 hover:bg-emerald-500">
                 Submit 
             </button>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center">
             {notes.map((note) => (
                 <div key={note.id}>
-                    <p>Title:{note.title}  Comment:{note.comment}</p>
-                    <button onClick={() => router.delete(`/notes/${note.id}`)}>Delete</button>
+                    <p className="bg-gray-400 p-2 rounded-lg">Title:{note.title} Comment:{note.comment}</p>
+                    <button onClick={() => router.delete(`/notes/${note.id}`)} className="bg-red-700 text-white p-1.5 rounded-lg">Delete</button>
                 </div>
             ))}
         </div>
