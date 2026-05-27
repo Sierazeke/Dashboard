@@ -44,7 +44,7 @@ class BankController extends Controller
 
     // --- Clear History ---
 
-        public function clearHistory(Request $request) {
+        public function clearHistory() {
             $user = auth()->user();
             Transaction::where('user_id', $user->id)->delete();
         }

@@ -42,20 +42,22 @@ export default function Notes({ user, notes }) {
 
         {/* --- Header --- */}
 
-        <div className="text-5xl font-bold m-6 p-2 bg-gray-400 text-center">
+        <div className="flex flex-col text-center text-5xl font-bold m-6 p-2 bg-gray-400">
             <h1>Notes</h1>
         </div>
 
         {/* --- Body --- */}
 
-        <div className="flex">
+        <div className="flex flex-col items-center my-1">
         {/* --- Title --- */}
             <input
             type="text" 
             value={title} 
             placeholder="Enter a title"
             onChange={(e) => setTitle(e.target.value)}/>
+        </div>
 
+        <div className="flex flex-col items-center my-1">
         {/* --- Comment --- */}
             <input
             type="text" 
@@ -65,10 +67,9 @@ export default function Notes({ user, notes }) {
         </div>
 
         {/* --- Button --- */}
-        <div>
+        <div className="flex flex-col items-center">
             <button 
-                onClick={() => router.post('/notes', {title: title, comment: comment})}
-                className="">
+                onClick={() => router.post('/notes', {title: title, comment: comment})}>
                 Submit 
             </button>
         </div>
@@ -76,7 +77,7 @@ export default function Notes({ user, notes }) {
         <div>
             {notes.map((note) => (
                 <div key={note.id}>
-                    <p>{note.title} - {note.comment}</p>
+                    <p>Title:{note.title}  Comment:{note.comment}</p>
                     <button onClick={() => router.delete(`/notes/${note.id}`)}>Delete</button>
                 </div>
             ))}
