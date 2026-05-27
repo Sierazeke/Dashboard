@@ -1,4 +1,10 @@
-export default function Notes({ user }) {
+import { useState } from 'react';
+import { router } from '@inertiajs/react';
+
+export default function Notes({ user, notes }) {
+    const [title, setTitle] = useState('');
+    const [comment, setComment] = useState('');
+
     return (
 
     <div className="bg-gray-300 min-h-screen">
@@ -34,6 +40,48 @@ export default function Notes({ user }) {
 
 {/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
 
+        {/* --- Header --- */}
+
+        <div className="text-5xl font-bold m-6 p-2 bg-gray-400 text-center">
+            <h1>Notes</h1>
+        </div>
+
+        {/* --- Body --- */}
+
+        <div className="flex">
+        {/* --- Title --- */}
+            <input
+            type="text" 
+            value={title} 
+            placeholder="Enter a title"
+            onChange={(e) => setTitle(e.target.value)}/>
+
+        {/* --- Comment --- */}
+            <input
+            type="text" 
+            value={comment} 
+            placeholder="Enter a comment"
+            onChange={(e) => setComment(e.target.value)}/>
+        </div>
+
+        {/* --- Button --- */}
+        <div>
+            <button 
+                onClick={() => router.post('/notes', {title: title, comment: comment})}
+                className="">
+                Submit 
+            </button>
+        </div>
+
+        <div>
+            {notes.map((note) => (
+                <div key={note.id}>
+                    <p>{note.title} - {note.comment}</p>
+                    <button onClick={() => router.delete(`/notes/${note.id}`)}>Delete</button>
+                </div>
+            ))}
+        </div>
+{/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
         
 
     </div>) 
