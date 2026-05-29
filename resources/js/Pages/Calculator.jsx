@@ -19,7 +19,7 @@ export default function Calculator({ user }) {
         return (
             <button 
                 onClick={onClick}
-                className="bg-zinc-500 font-bold ml-2 text-white w-20 h-14 mr-1 mt-1 rounded-lg hover:bg-zinc-600">
+                className="bg-zinc-500 font-bold ml-2.5 text-white w-20 h-14 mr-1 mt-1 rounded-lg hover:bg-zinc-600">
                 {label}
             </button>
         );
@@ -36,34 +36,35 @@ export default function Calculator({ user }) {
 
         {/* --- Homepage --- */}
         <a href="/">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Homepage</button>
+            <button className="ml-5  p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Homepage</button>
         </a>
         {/* --- Bank --- */}
         <a href="bank">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Bank</button>
+            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Bank</button>
         </a>
         {/* --- Calculator --- */}
         <a href="calculator">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Calculator</button>
+            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Calculator</button>
         </a>
         {/* --- Notes --- */}
         <a href="notes">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Notes</button>
+            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Notes</button>
         </a>
         {/* --- Profile --- */}
         <a href="profile">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Profile</button>
+            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Profile</button>
         </a>
 
     </nav>
 
 {/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
 
-    <div className="m-4">
+    <div className="m-4 block justify-center mx-auto w-96">
 
-        <div className="p-2 bg-gray-400 w-1/4">{expression || '0'}</div>
-
-        <div className="p-2 bg-gray-400 w-1/4">= {result}</div>
+        <div className="p-2 bg-gray-400 mx-2.5 mb-3">
+            <div>{expression || '0'}</div>
+            <div>= {result}</div>
+        </div>
 
         <div>
             <CalcButton label="7" onClick={() => setExpression(expression + '7')}/>

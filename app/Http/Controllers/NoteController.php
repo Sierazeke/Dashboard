@@ -19,8 +19,8 @@ class NoteController extends Controller
     // --- Create A Post ---
     public function add(Request $request) {
         $request->validate([
-            'title' => 'required',
-            'comment' => 'required'
+            'title' => 'required|min:1|max:64',
+            'comment' => 'required|min:1|max:255'
         ]);
         $user = auth()->user();
         Notes::create([

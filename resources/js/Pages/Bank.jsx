@@ -17,28 +17,29 @@ export default function Homepage({ user, transactions }) {
 
         {/* --- Homepage --- */}
         <a href="/">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Homepage</button>
+            <button className="ml-5  p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Homepage</button>
         </a>
         {/* --- Bank --- */}
         <a href="bank">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Bank</button>
+            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Bank</button>
         </a>
         {/* --- Calculator --- */}
         <a href="calculator">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Calculator</button>
+            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Calculator</button>
         </a>
         {/* --- Notes --- */}
         <a href="notes">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Notes</button>
+            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Notes</button>
         </a>
         {/* --- Profile --- */}
         <a href="profile">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Profile</button>
+            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Profile</button>
         </a>
 
     </nav>
 
 {/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
+
         <div>
 
     {/* --- Balance --- */}

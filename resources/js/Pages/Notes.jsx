@@ -17,23 +17,23 @@ export default function Notes({ user, notes }) {
 
         {/* --- Homepage --- */}
         <a href="/">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Homepage</button>
+            <button className="ml-5  p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Homepage</button>
         </a>
         {/* --- Bank --- */}
         <a href="bank">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Bank</button>
+            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Bank</button>
         </a>
         {/* --- Calculator --- */}
         <a href="calculator">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Calculator</button>
+            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Calculator</button>
         </a>
         {/* --- Notes --- */}
         <a href="notes">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Notes</button>
+            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Notes</button>
         </a>
         {/* --- Profile --- */}
         <a href="profile">
-            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:p-2.5 transition-smooth duration-300 rounded-lg ">Profile</button>
+            <button className="ml-5 p-2 bg-slate-700 hover:bg-gray-600 hover:underline hover:scale-105 transition-smooth duration-300 rounded-lg ">Profile</button>
         </a>
 
     </nav>
@@ -43,7 +43,7 @@ export default function Notes({ user, notes }) {
         {/* --- Header --- */}
 
         <div className="flex flex-col text-center text-5xl font-bold m-6 p-2">
-            <h1>Notes 🕮</h1>
+            <h1 className="text-slate-800">Notes 🕮 </h1>
         </div>
 
         {/* --- Body --- */}
@@ -69,24 +69,27 @@ export default function Notes({ user, notes }) {
         </div>
 
         {/* --- Button --- */}
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mb-4">
             <button 
                 onClick={() => router.post('/notes', {title: title, comment: comment})}
-                className="bg-emerald-400 py-2 px-4 m-1 rounded-lg transition duration-300 hover:bg-emerald-500">
+                className="bg-[#5cc229] py-2 px-4 m-1 rounded-lg transition-smooth duration-200 hover:bg-[#53a32b] hover:scale-105">
                 Submit 
             </button>
         </div>
 
-        <div className="flex flex-col items-center">
+        <div className="block justify-center w-96 items-center mx-auto">
             {notes.map((note) => (
                 <div key={note.id}>
                     <p className="bg-gray-400 p-2 rounded-lg">Title:{note.title}, Comment:{note.comment}</p>
-                    <button onClick={() => router.delete(`/notes/${note.id}`)} className="bg-red-700 text-white p-1.5 rounded-lg">Delete</button>
+                    <button 
+                    onClick={(e) => {e.preventDefault(); router.delete(`/notes/${note.id}`)}}
+                    className="bg-red-700 text-white p-1.5 rounded-lg mt-1 my-3 transition-smooth duration-300 hover:scale-110">
+                        Delete
+                    </button>
                 </div>
             ))}
         </div>
 {/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
         
-
     </div>) 
 }
