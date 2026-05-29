@@ -21,6 +21,8 @@ class BankController extends Controller
             'amount' => $request->input('amount'),
             'type' => 'Deposit'
         ]);
+
+        sleep(1);
     }
 
     // --- Withdraw Money ---
@@ -40,6 +42,8 @@ class BankController extends Controller
             'amount' => $request->input('amount'),
             'type' => 'Withdraw'
         ]);
+
+        sleep(2);
     }
 
     // --- Clear History ---
