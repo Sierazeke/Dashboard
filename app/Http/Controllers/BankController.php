@@ -27,7 +27,7 @@ class BankController extends Controller
 
     public function withdraw(Request $request) {
         $request->validate([
-            'amount' => 'required|numeric|min:1|max:1000'
+            'amount' => 'required|nu    meric|min:1|max:1000'
         ]);
         $user = auth()->user();
         if ($request->input('amount') > $user->balance) {

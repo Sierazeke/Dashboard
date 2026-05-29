@@ -13,7 +13,7 @@ export default function Homepage({ user, transactions }) {
 
     <nav className="bg-gray-800 p-2 font-bold text-2xl font-mono text-white flex items-center gap-4">
 
-        <h1 className="bg-gray-600 p-2 rounded-lg">Hello, {user ? user.name : 'Guest'}!</h1>
+        <h1 className="bg-gray-600 p-2 rounded-lg">Hello,{user ? user.name : 'Guest'}!</h1>
 
         {/* --- Homepage --- */}
         <a href="/">
