@@ -50,7 +50,7 @@ export default function Homepage({ user, transactions }) {
     {/* --- Deposit --- */}
 
             <input 
-                className="font-bold ml-5 bg-zinc-200 text-center"
+                className="font-bold ml-5 bg-neutral-200 text-center"
                 type="number" 
                 value={deposit}
                 placeholder="Enter a number"
@@ -67,7 +67,7 @@ export default function Homepage({ user, transactions }) {
     {/* --- Withdraw --- */}
 
             <input 
-                className="font-bold ml-5 bg-zinc-200 text-center"
+                className="font-bold ml-5 bg-neutral-200 text-center"
                 type="number" 
                 value={withdraw} 
                 placeholder="Enter a number"

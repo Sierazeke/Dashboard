@@ -7,7 +7,7 @@ export default function Notes({ user, notes }) {
 
     return (
 
-    <div className="bg-neutral-200 min-h-screen">
+    <div className="bg-neutral-300  min-h-screen">
 
 {/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
 
@@ -54,7 +54,7 @@ export default function Notes({ user, notes }) {
             type="text" 
             value={title} 
             placeholder="Enter a title"
-            className="bg-gray-200 text-center rounded"
+            className="bg-neutral-100 text-center rounded"
             onChange={(e) => setTitle(e.target.value)}/>
         </div>
 
@@ -64,7 +64,7 @@ export default function Notes({ user, notes }) {
             type="text" 
             value={comment} 
             placeholder="Enter a comment"
-            className="bg-gray-200 text-center rounded"
+            className="bg-neutral-100 text-center rounded"
             onChange={(e) => setComment(e.target.value)}/>
         </div>
 
@@ -80,7 +80,7 @@ export default function Notes({ user, notes }) {
         <div className="block justify-center w-96 items-center mx-auto">
             {notes.map((note) => (
                 <div key={note.id}>
-                    <p className="bg-gray-400 p-2 rounded-lg">Title:{note.title}, Comment:{note.comment}</p>
+                    <p className="bg-zinc-300 p-2 rounded-lg border-2 border-gray-400">Title: {note.title} <br /> Comment: {note.comment} </p>
                     <button 
                     onClick={(e) => {e.preventDefault(); router.delete(`/notes/${note.id}`)}}
                     className="bg-red-700 text-white p-1.5 rounded-lg mt-1 my-3 transition-smooth duration-300 hover:scale-110">
