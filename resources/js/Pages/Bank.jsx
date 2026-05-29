@@ -40,11 +40,12 @@ export default function Homepage({ user, transactions }) {
 
 {/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
 
+    <div className="block justify-center mx-auto w-96">
         <div>
 
     {/* --- Balance --- */}
 
-            <h1 className="font-bold ml-5 w-40 my-6 bg-gray-400 text-center ">Your current balance is {user.balance}€</h1> 
+            <h1 className="font-bold ml-5 w-40 my-6 bg-slate-400 text-center p-2 rounded-lg">Your current balance is {user.balance}€</h1> 
         
     {/* --- Deposit --- */}
 
@@ -58,11 +59,11 @@ export default function Homepage({ user, transactions }) {
 
             <button 
             onClick={() => router.post('/deposit', { amount: deposit })} 
-            className="font-bold ml-5 bg-zinc-400 p-2 rounded-lg hover:bg-zinc-500 transition duration-300"> 
+            className="font-bold ml-5 bg-[#2dab18] p-2 rounded-lg hover:bg-[#2c8e1b] transition duration-300"> 
             Deposit! 
             </button> 
-            <br /> <br />
-
+            <br /> <br /> 
+            
     {/* --- Withdraw --- */}
 
             <input 
@@ -74,7 +75,7 @@ export default function Homepage({ user, transactions }) {
             />
             <button 
                 onClick={() => router.post('/withdraw', { amount: withdraw })}
-                className="font-bold ml-5 bg-zinc-400 p-2 rounded-lg hover:bg-zinc-500 hover:bg-zinc-500 transition duration-300"> 
+                className="font-bold ml-5 bg-[#cf341f] p-2 rounded-lg hover:bg-zinc-500 hover:bg-[#ac3222] transition duration-300"> 
                 Withdraw! 
             </button>
         </div>
@@ -82,7 +83,7 @@ export default function Homepage({ user, transactions }) {
     {/* --- History --- */}
         
         <div className="font-bold font-mono ml-5 my-4">
-            <nav className="flex bg-gray-400 w-1/4 p-2">
+            <nav className="flex bg-gray-400 p-2">
                 <h2 className="mr-3 text-xl p-2 text-center">Transaction History</h2>
                 <button
                     onClick={() => router.delete('/clear-history')} 
@@ -92,13 +93,13 @@ export default function Homepage({ user, transactions }) {
             </nav>
 
             {transactions.map((transaction) => (
-                <p className="bg-slate-400 w-1/4 text-center my-1 p-1"
+                <p className="bg-slate-400 w-auto text-center my-1 p-1"
                  key={transaction.id}>
                     {transaction.type} - {transaction.amount}€
                 </p>
             ))}
         </div>
-
+    </div>
 {/* ----------------------------------------------------------------------------------------------------------------------------------------- */}
     </div>)
 }

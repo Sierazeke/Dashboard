@@ -22,7 +22,7 @@ class BankController extends Controller
             'type' => 'Deposit'
         ]);
 
-        sleep(1);
+        sleep(1); // Depositing...
     }
 
     // --- Withdraw Money ---
@@ -43,7 +43,7 @@ class BankController extends Controller
             'type' => 'Withdraw'
         ]);
 
-        sleep(2);
+        sleep(1.5); // Withdrawing...
     }
 
     // --- Clear History ---
