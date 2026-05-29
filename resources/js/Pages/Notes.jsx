@@ -80,7 +80,7 @@ export default function Notes({ user, notes }) {
         <div className="flex flex-col items-center">
             {notes.map((note) => (
                 <div key={note.id}>
-                    <p className="bg-gray-400 p-2 rounded-lg">Title:{note.title} Comment:{note.comment}</p>
+                    <p className="bg-gray-400 p-2 rounded-lg">Title:{note.title}, Comment:{note.comment}</p>
                     <button onClick={() => router.delete(`/notes/${note.id}`)} className="bg-red-700 text-white p-1.5 rounded-lg">Delete</button>
                 </div>
             ))}

@@ -11,5 +11,5 @@ class Notes extends Model
         'user_id',
         'title',
         'comment'
-    ];
+    ]; 
 }
